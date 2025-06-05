@@ -15,6 +15,7 @@ import PlaceOrder from "./pages/PlaceOrder.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import About from "./pages/About.jsx";
+import ProductPage from "./pages/SingleProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/signup",
-        element: <Signup/>,
+        element: <Signup />,
       },
       {
         path: "/cart",
@@ -46,9 +47,14 @@ const router = createBrowserRouter([
         element: <ProductsPage />,
       },
       {
-        path:"/place-order",
-        element:<PlaceOrder />
-      }
+        path: "/product/:productId",
+        element: <ProductPage />,
+      },
+
+      {
+        path: "/place-order",
+        element: <PlaceOrder />,
+      },
     ],
   },
   {

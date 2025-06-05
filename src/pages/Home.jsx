@@ -1,7 +1,9 @@
 import HeroSection from "../components/HomePage/HeroSection";
-import ProductShowcase from "../components/HomePage/ProductShowcase";
+import Bestseller from "../components/HomePage/ProductShowcase";
 import Testimonials from "../components/HomePage/Testimonials";
-import OperationalTimeline from "../components/HomePage/Timeline";
+
+import FeatureCards from "../components/HomePage/aboutproduct";
+import CustomerStats from "../components/HomePage/number";
 
 function HomePage() {
   const mockProducts = [
@@ -13,8 +15,9 @@ function HomePage() {
   return (
     <>
       <HeroSection />
-      <ProductShowcase products={mockProducts} />
-      <OperationalTimeline />
+      <FeatureCards />
+      <CustomerStats />
+      <Bestseller />
       <Testimonials />
     </>
   );

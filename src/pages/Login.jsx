@@ -23,7 +23,7 @@ function Login() {
         const userData = await authServices.getCurrentUser();
         if (userData) {
           dispatch(loginAction({ userData }));
-          navigate("/home");
+          navigate("/");
         }
       }
     } catch (error) {

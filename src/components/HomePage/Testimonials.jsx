@@ -1,100 +1,63 @@
-import React, { useState } from "react";
-import { StarIcon } from "@heroicons/react/24/solid";
+import React from 'react';
+import male from '../../assets/profile.png';
+import female from '../../assets/woman.png';
 
-const TestimonialCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
+const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah K.",
-      role: "Product Designer",
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      rating: 5,
-      comment: "The custom phone stands were perfect for our corporate event. Excellent quality and fast turnaround!",
+      quote: "I bought a catch tray to manage my jewellery and it is great and the paint quality is good too.",
+      name: "Jessica Martinez",
+      handle: "",
+      avatar: female
     },
     {
-      name: "Raj P.",
-      role: "Small Business Owner",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-      rating: 4,
-      comment: "Love my custom plant pots! The attention to detail is amazing. Will definitely order again.",
+      quote: "I ordered a mini gun and it looks quite real. No one can tell the difference. The quality of the product is also fabulous.",
+      name: "Karanveer Singh Sra",
+      handle: "",
+      avatar: male
     },
     {
-      name: "Emily T.",
-      role: "Office Manager",
-      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
-      rating: 5,
-      comment: "Our branded desk organizers arrived right on time and look even better than expected. Highly recommend!",
+      quote: "I got miniatures from them of my parents. Those miniatures were very detailed and affordable too while having superior quality and were tough.",
+      name: "Himmath",
+      handle: "",
+      avatar: male
     }
   ];
 
-  const renderStars = (rating) => {
-    return [...Array(5)].map((_, i) => (
-      <StarIcon 
-        key={i} 
-        className={`w-5 h-5 ${i < rating ? "text-yellow-400" : "text-base-300"}`} 
-      />
-    ));
-  };
-
   return (
-    <div className="w-full px-4 sm:px-6 py-12 bg-base-100">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-secondary mb-12">
-          What Our Customers Say
-        </h2>
+    <div className="w-full bg-white py-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h3 className="text-purple-600 font-medium mb-4">Testimonials</h3>
+          <h2 className="text-5xl font-bold text-gray-900 max-w-4xl mx-auto">
+            We have served many amazing people
+          </h2>
+        </div>
 
-        <div className="relative">
-          {/* Testimonial Cards */}
-          <div className="carousel w-full space-x-4">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                id={`testimonial-${index}`}
-                className={`carousel-item relative w-full md:w-1/2 lg:w-1/3 ${
-                  index === activeIndex ? "block" : "hidden md:block"
-                }`}
-              >
-                <div className="card bg-base-100 border border-base-300 rounded-box p-6 h-full transform transition-all hover:shadow-lg hover:border-primary/30">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="avatar">
-                      <div className="w-12 rounded-full ring-2 ring-primary ring-offset-2 ring-offset-base-100">
-                        <img src={testimonial.avatar} alt={testimonial.name} />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-base-content">{testimonial.name}</h3>
-                      <p className="text-sm text-base-content/70">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <div className="flex mb-3">
-                    {renderStars(testimonial.rating)}
-                  </div>
-                  <p className="text-base-content/90 italic">
-                    "{testimonial.comment}"
-                  </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-gray-50 p-8 rounded-lg">
+              <blockquote className="text-gray-800 mb-6">
+                "{testimonial.quote}"
+              </blockquote>
+              <div className="flex items-center">
+                <img 
+                  src={testimonial.avatar} 
+                  alt={`${testimonial.name}'s avatar`} 
+                  className="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-gray-600">{testimonial.handle}</p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Navigation Controls */}
-          <div className="flex justify-center gap-2 mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className={`w-3 h-3 rounded-full ${
-                  index === activeIndex ? "bg-primary" : "bg-base-300"
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default TestimonialCarousel;
+export default Testimonials;

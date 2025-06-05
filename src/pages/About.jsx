@@ -4,6 +4,7 @@ import WhoWeAre from '../components/AboutUs/WhoWeAre'
 import MissionVision from '../components/AboutUs/MissionVision'
 import TeamShowcase from '../components/AboutUs/TeamShowcase'
 import CompanyTeamPhoto from '../components/AboutUs/EnterCompany'
+import OperationalTimeline from '../components/AboutUs/Timeline'
 
 function About() {
   return (
@@ -11,7 +12,7 @@ function About() {
     <AboutHero />
     <WhoWeAre/>
     <MissionVision/>
-    <TeamShowcase />
+    <OperationalTimeline />
     <CompanyTeamPhoto/>
     </>
   )
