@@ -93,7 +93,7 @@ const ProductsPage = () => {
 
   const filteredProducts = products.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    product.description.toLowerCase().includes(searchTerm.toLowerCase())
+    product.discription.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (loading) return <LoadingState />;

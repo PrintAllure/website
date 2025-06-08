@@ -28,6 +28,7 @@ const ProductPage = () => {
         const productData = await productServices.getProduct(productId);
         if (productData) {
           setProduct(productData);
+          console.log("Fetched product", productData);
 
           // ✅ Fetch all products (no category logic)
           const allProducts = await productServices.getAllProducts();

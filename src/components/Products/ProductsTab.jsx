@@ -5,27 +5,27 @@ const ProductTabs = ({ product }) => {
   const [activeTab, setActiveTab] = useState('description');
 
   const tabs = [
-    { id: 'description', label: 'Description' },
-    { id: 'specifications', label: 'Specifications' },
+    // { id: 'description', label: 'Description' },
+    // { id: 'specifications', label: 'Specifications' },
     { id: 'reviews', label: 'Reviews' },
     { id: 'shipping', label: 'Shipping & Returns' }
   ];
 
   const renderTabContent = () => {
     switch(activeTab) {
-      case 'description':
-        return <div>{product.detailedDescription || product.description}</div>;
-      case 'specifications':
-        return (
-          <div className="space-y-2">
-            {product.specifications?.map((spec, index) => (
-              <div key={index} className="flex">
-                <span className="font-medium w-1/3">{spec.key}:</span>
-                <span className="w-2/3">{spec.value}</span>
-              </div>
-            ))}
-          </div>
-        );
+      // case 'description':
+      //   return <div>{product.detailedDescription || product.description}</div>;
+      // case 'specifications':
+      //   return (
+      //     <div className="space-y-2">
+      //       {product.specifications?.map((spec, index) => (
+      //         <div key={index} className="flex">
+      //           <span className="font-medium w-1/3">{spec.key}:</span>
+      //           <span className="w-2/3">{spec.value}</span>
+      //         </div>
+      //       ))}
+      //     </div>
+      //   );
       case 'reviews':
         return (
           <div>

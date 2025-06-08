@@ -37,7 +37,7 @@ const ProductInfo = ({
 
       <p className="text-2xl font-bold text-primary mb-4">₹{product.price}</p>
       
-      <p className="text-base-content mb-6">{product.description}</p>
+      <p className="text-base-content mb-6">{product.discription}</p>
 
       <div className="divider"></div>
 
@@ -71,10 +71,11 @@ const ProductInfo = ({
       <div className="divider"></div>
 
       <div className="space-y-2">
-        <p><span className="font-medium">Category:</span> {product.category}</p>
+        {/* <p><span className="font-medium">Category:</span> {product.category}</p>
         <p><span className="font-medium">Material:</span> {product.material}</p>
-        <p><span className="font-medium">Dimensions:</span> {product.dimensions}</p>
-        <p><span className="font-medium">Availability:</span> {product.stock > 0 ? 'In Stock' : 'Out of Stock'}</p>
+        <p><span className="font-medium">Dimensions:</span> {product.dimensions}</p> */}
+        <p><span className="font-medium">Availability:</span> In Stock </p>
+        {/* {product.stock > 0 ? 'In Stock' : 'Out of Stock'} */}
       </div>
     </div>
   );
