@@ -1,4 +1,6 @@
 import React from "react";
+import printer from "../../assets/printerbrc.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const PrintAllureHero = () => {
   return (
@@ -7,7 +9,7 @@ const PrintAllureHero = () => {
         {/* Image Section */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img 
-            src="https://images.unsplash.com/photo-1610000000000-1c3b3b3b3b3b" 
+            src= {printer} 
             alt="3D Printer and Products" 
             className="max-w-md w-full rounded-box shadow-xl border-2 border-accent" 
           />
@@ -27,12 +29,12 @@ const PrintAllureHero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="btn btn-primary btn-lg rounded-box px-8 shadow-md hover:shadow-lg">
-              Explore Products
-            </button>
-            <button className="btn btn-outline btn-secondary btn-lg rounded-box px-8 hover:bg-secondary hover:text-secondary-content">
-              Custom Design
-            </button>
+           <Link to="/products">
+  <button className="btn btn-primary btn-lg rounded-box px-8 shadow-md hover:shadow-lg">
+    Explore Products
+  </button>
+</Link>
+            
           </div>
           
           {/* Branding Element */}

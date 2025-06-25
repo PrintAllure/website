@@ -1,4 +1,5 @@
 import React from "react";
+import TeamPhoto from "../../assets/FullSizeRender.jpg";
 
 const CompanyTeamPhoto = () => {
   return (
@@ -12,13 +13,13 @@ const CompanyTeamPhoto = () => {
           {/* Team Photo */}
           <figure className="relative aspect-video w-full">
             <img 
-              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc" 
+              src={TeamPhoto} 
               alt="PrintAllure Team Photo" 
               className="w-full h-full object-cover"
             />
             
             {/* Photo Overlay */}
-            <div className="absolute inset-0 bg-primary/10 flex items-center justify-center">
+            <div className="absolute inset-0 bg-primary/10 flex mt-100 items-center justify-center">
               <div className="text-center p-6 backdrop-blur-sm bg-base-100/70 rounded-box">
                 <h3 className="text-2xl font-bold text-secondary mb-2">
                   Meet Our Team
@@ -39,7 +40,7 @@ const CompanyTeamPhoto = () => {
             <div className="stats bg-base-100 shadow">
               <div className="stat">
                 <div className="stat-title">Team Members</div>
-                <div className="stat-value text-primary">12+</div>
+                <div className="stat-value text-primary">12</div>
                 <div className="stat-desc">Students from GGD SD College</div>
               </div>
               <div className="stat">

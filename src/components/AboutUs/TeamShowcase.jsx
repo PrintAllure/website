@@ -1,6 +1,7 @@
 import React from "react";
 import { LinkedinIcon, InstagramIcon } from "lucide-react"; // Using Lucide icons for social media
 
+
 const TeamShowcase = () => {
   const teamMembers = [
     {

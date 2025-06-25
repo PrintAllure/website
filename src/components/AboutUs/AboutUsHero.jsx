@@ -20,14 +20,7 @@ const AboutHero = () => {
           <p className="text-xl md:text-2xl text-base-content mb-8">
             Where Creativity Meets Function — Your Destination for Custom 3D-Printed Solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn btn-primary btn-lg rounded-box px-8">
-              Explore Our Products
-            </button>
-            <button className="btn btn-outline btn-lg rounded-box px-8 border-base-content/20 hover:border-primary">
-              Learn Our Process
-            </button>
-          </div>
+          
         </div>
       </div>
     </div>

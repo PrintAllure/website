@@ -29,7 +29,7 @@ const Testimonials = () => {
     <div className="w-full bg-white py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h3 className="text-purple-600 font-medium mb-4">Testimonials</h3>
+          <h3 className="text-blue-800 font-medium mb-4">Testimonials</h3>
           <h2 className="text-5xl font-bold text-gray-900 max-w-4xl mx-auto">
             We have served many amazing people
           </h2>
