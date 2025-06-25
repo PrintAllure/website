@@ -9,7 +9,7 @@ import store from "./store/store.js";
 // import ThemeProvider from "./components/Container/ThemeProvider.jsx";
 import Home from "./pages/Home.jsx";
 import VerifiyEmail from "./pages/VerifiyEmail.jsx";
-import Cart from "./pages/cart.jsx";
+import Cart from "./pages/Cart.jsx";
 import ProductsPage from "./pages/ProductsPage.jsx";
 import PlaceOrder from "./pages/PlaceOrder.jsx";
 import Login from "./pages/Login.jsx";
